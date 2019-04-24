@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+    <!-- 我是谁？ -->
+  <groupId>com.tianliangedu.job001</groupId>
+  <artifactId>WebSpiderMiddle4Job001</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- 首先配置仓库的服务器位置 -->
+  <repositories>
+  	<repository>
+  		<id>nexus-aliyun</id>
+  		<name>Nexus aliyun</name>
+  		<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+  	</repository>
+  </repositories>
+  
+  <!-- 依赖哪些 -->
+    <dependencies>
+    </dependencies>
+  
+  <!-- 项目发布与打包 -->
+  <build>
+  	<finalName>WebSpiderMiddle4Job001</finalName>  	
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>  
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>2.3.2</version>
+			<configuration>
+				<source>1.7</source>
+				<target>1.7</target>
+				<encoding>utf-8</encoding>
+			</configuration>
+  		</plugin>
+  	  </plugins>
+  </build>
+
+</project>
