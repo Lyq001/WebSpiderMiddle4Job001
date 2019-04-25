@@ -1,10 +1,9 @@
 package com.tianliangedu.job001.utils;
 
 import java.io.BufferedReader;
-import java.io.IOException;
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,9 +13,11 @@ public class IOUtil {
 		InputStream is =null;
 		//文件读取
 		if(isClasspath){
+			//从系统classpath路径读取
 			is = ReadConfigUtil.class.getClassLoader().getResourceAsStream(filepath);
 		}else{
-			
+			//从classpath外部路径读取
+			is = new FileInputStream(filepath);
 		}
 		InputStreamReader isr = new InputStreamReader(is,charset);
 		BufferedReader br = new BufferedReader(isr);
